@@ -1,3 +1,3 @@
 # college_projects
 
-This is a collection of previous work done in college across a variety of classes. I wanted to provide examples of work done in various languages.
+This is a collection of college work done with a variety of languages and tools.
