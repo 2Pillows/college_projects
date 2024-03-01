@@ -3,8 +3,6 @@ package xmltograph;
 /**
  * Test class for State
  * 
- * The StateTest class used a library from VT in its Build Path which is why it
- * won't compile.
  * 
  */
 public class StateTest extends student.TestCase {

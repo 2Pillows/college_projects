@@ -6,8 +6,6 @@ package towerofhanoi;
 /**
  * Test class for the HanoiSolver class
  * 
- * The HanoiSolverTest class used a library from VT in its Build Path which is
- * why it won't compile.
  */
 public class HanoiSolverTest extends student.TestCase {
 

@@ -8,8 +8,6 @@ import java.util.EmptyStackException;
 /**
  * Test class for the LinkedStack class
  * 
- * The LinkedStackTest class used a library from VT in its Build Path which is
- * why it won't compile.\
  */
 public class LinkedStackTest extends student.TestCase {
 

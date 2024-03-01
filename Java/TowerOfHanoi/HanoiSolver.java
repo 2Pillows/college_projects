@@ -9,9 +9,6 @@ import java.util.Observable;
  * Solves the Tower of Hanoi in
  * the stack of the Disks.
  * 
- * The HanoiSolver class used a library from VT in its Build Path which is why
- * it won't compile.
- * 
  */
 public class HanoiSolver extends Observable {
 

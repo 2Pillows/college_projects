@@ -9,9 +9,6 @@ import stack.StackInterface;
 /**
  * The stack of Towers will be made and managed in this class.
  * 
- * The LinkedStack class used a library from VT in its Build Path which is why
- * it won't compile.
- * 
  * @param <T> Any object to be used in the stack
  */
 public class LinkedStack<T> implements StackInterface<T> {
@@ -141,8 +138,6 @@ public class LinkedStack<T> implements StackInterface<T> {
 /**
  * Creates single linked nodes
  * 
- * @author henrysmith
- * @version Oct 19, 2020
  * @param <T> Any object to be used in the nodes
  */
 class Node<T> {

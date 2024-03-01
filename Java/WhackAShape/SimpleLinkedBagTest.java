@@ -6,9 +6,6 @@ package game;
 /**
  * Test method for SimpleLinkedBag
  * 
- * The SimpleLinkedBagTest class used a library from VT in its Build Path which
- * is why it won't compile.
- * 
  */
 public class SimpleLinkedBagTest extends student.TestCase {
 

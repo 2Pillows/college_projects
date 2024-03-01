@@ -6,9 +6,6 @@ package towerofhanoi;
 /**
  * Test class for the Tower class
  * 
- * The TowerTest class used a library from VT in its Build Path which is why it
- * won't compile.
- * 
  */
 public class TowerTest extends student.TestCase {
 

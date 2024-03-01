@@ -3,9 +3,6 @@ package xmltograph;
 /**
  * Test class for Race
  * 
- * The RaceTest class used a library from VT in its Build Path which is why it
- * won't compile.
- * 
  */
 public class RaceTest extends student.TestCase {
 

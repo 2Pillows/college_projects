@@ -5,9 +5,6 @@ import java.io.FileNotFoundException;
 /**
  * Testing class for Calculator class.
  * 
- * The CalculatorTest class used a library from VT in its Build Path which is
- * why it won't compile.
- * 
  */
 public class CalculatorTest extends student.TestCase {
 

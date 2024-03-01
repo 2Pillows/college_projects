@@ -16,8 +16,6 @@ import cs2.WindowSide;
  * and adding the graphical representation of the towers
  * and disks to the said window.
  * 
- * The PuzzleWindow class used a library from VT in its Build Path which is why
- * it won't compile.
  * 
  */
 public class PuzzleWindow implements Observer {

@@ -11,9 +11,6 @@ import cs2.WindowSide;
  * Creates window for graph of Races. Includes buttons for sorting
  * and quitting as well as cycling though States.
  * 
- * The GUIWindow class used a library from VT in its Build Path which is why it
- * won't compile.
- * 
  */
 public class GUIWindow {
 

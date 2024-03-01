@@ -9,9 +9,6 @@ import xmltograph.SinglyLinkedList.Node;
 /**
  * Test class for SinglyLinkedList
  * 
- * The SinglyLinkedlistTest class used a library from VT in its Build Path which
- * is why it won't compile.
- * 
  */
 public class SinglyLinkedListTest extends student.TestCase {
 

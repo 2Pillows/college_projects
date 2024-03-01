@@ -12,9 +12,6 @@ import student.TestableRandom;
  * methods for adding, removing, getting size, testing
  * if empty, and returning a random object from bag.
  * 
- * The SimpleLinkedBag class used a library from VT in its Build Path which is
- * why it won't compile.
- * 
  * @param <T> Any object that will be added to the bag
  */
 public class SimpleLinkedBag<T> implements SimpleBagInterface<T> {

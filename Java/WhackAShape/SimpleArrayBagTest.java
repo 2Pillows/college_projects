@@ -6,9 +6,6 @@ package game;
 /**
  * Test method for SimpleArrayBag
  * 
- * The SimleArrayBagTest class used a library from VT in its Build Path which is
- * why it won't compile.
- * 
  */
 public class SimpleArrayBagTest extends student.TestCase {
 

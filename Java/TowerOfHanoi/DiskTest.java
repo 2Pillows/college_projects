@@ -3,8 +3,6 @@ package towerofhanoi;
 /**
  * Testing class for the Disk class
  * 
- * The DiskTest class used a library from VT in its Build Path which is why it
- * won't compile.
  */
 public class DiskTest extends student.TestCase {
 

@@ -7,8 +7,6 @@ package towerofhanoi;
  * Creates the towers that will be used and based on
  * their positions.
  * 
- * The Tower class used a library from VT in its Build Path which is why it
- * won't compile.
  * 
  */
 public class Tower extends LinkedStack<Disk> {

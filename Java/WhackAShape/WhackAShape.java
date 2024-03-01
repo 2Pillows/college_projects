@@ -18,9 +18,6 @@ import student.TestableRandom;
  * WhackAShape class that will create the window and shapes
  * for the project.
  * 
- * The WhackAShape class used a library from VT in its Build Path which is why
- * it won't compile.
- * 
  */
 public class WhackAShape {
 

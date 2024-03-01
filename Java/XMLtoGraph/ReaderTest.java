@@ -5,9 +5,6 @@ import java.io.FileNotFoundException;
 /**
  * Not needed for the project but used to test if the Reader was
  * properly gathering data from File.
- * 
- * The ReaderTest class used a library from VT in its Build Path which is why it
- * won't compile.
  */
 public class ReaderTest extends student.TestCase {
 

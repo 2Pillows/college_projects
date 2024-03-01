@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         openUrlButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://henrysmith078.wixsite.com/mysite";
+                String url = "https://{website_name}.wixsite.com/mysite";
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);
             }

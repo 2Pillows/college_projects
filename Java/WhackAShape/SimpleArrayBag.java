@@ -11,9 +11,6 @@ import student.TestableRandom;
  * total length of 25. Includes method to add, get size,
  * test if empty, pick a random object, and remove.
  * 
- * The SimpleArrayBag class used a library from VT in its Build Path which is
- * why it won't compile.
- * 
  * @param <T> Any Object that will be used in the bag
  */
 

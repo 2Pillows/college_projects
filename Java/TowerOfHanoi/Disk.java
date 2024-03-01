@@ -7,8 +7,6 @@ import cs2.Shape;
 /**
  * Creates the Disk of certain width
  * 
- * The Disk class used a library from VT in its Build Path which is why it won't
- * compile.
  */
 public class Disk extends Shape {
 
