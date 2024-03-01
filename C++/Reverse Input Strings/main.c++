@@ -1,9 +1,5 @@
 /*
 ------------------------------------------------------------------------
- Program Name: CTA 2
- Author: Henry Smith
- Date: 1/29/2023
-------------------------------------------------------------------------
  Pseudocode: Collects 3 strings of unqiue length from user. For each inputted string, print out reversed string.
 ------------------------------------------------------------------------
  Program Inputs: 3 strings of unique length

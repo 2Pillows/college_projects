@@ -1,9 +1,5 @@
 /*
 ------------------------------------------------------------------------
- Program Name: Portfolio Milestone
- Author: Henry Smith
- Date: 3/5/2023
-------------------------------------------------------------------------
  Pseudocode: Two threads are created to count up to 20 and down to 20. Threads are managed using mutex to prevent parallel execution
 ------------------------------------------------------------------------
  Program Inputs: N/A

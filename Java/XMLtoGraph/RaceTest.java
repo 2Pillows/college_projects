@@ -3,14 +3,13 @@ package xmltograph;
 /**
  * Test class for Race
  * 
- * The RaceTest class used a library from VT in its Build Path which is why it won't compile.
+ * The RaceTest class used a library from VT in its Build Path which is why it
+ * won't compile.
  * 
- * @author Henry Smith
- * @version Nov 13, 2020
  */
 public class RaceTest extends student.TestCase {
 
-    //~ Instance/static variables .............................................
+    // ~ Instance/static variables .............................................
 
     private Race white;
     private Race black;
@@ -18,7 +17,7 @@ public class RaceTest extends student.TestCase {
     private Race other;
     private Race empty;
 
-    //~ Constructors ..........................................................
+    // ~ Constructors ..........................................................
 
     /**
      * Instantiates variables before each test method
@@ -31,7 +30,7 @@ public class RaceTest extends student.TestCase {
         empty = new Race(null, 10, 5);
     }
 
-    //~ Public Methods ........................................................
+    // ~ Public Methods ........................................................
 
     // ----------------------------------------------------------
     /**
@@ -48,7 +47,7 @@ public class RaceTest extends student.TestCase {
      */
     public void testGetCases() {
         assertEquals(10, white.getCases());
-        
+
         white = new Race("White", 23, 2);
         assertEquals(8.6, white.getRatio(), 0.1);
     }
@@ -60,7 +59,7 @@ public class RaceTest extends student.TestCase {
     public void testGetDeaths() {
         assertEquals(5, white.getDeaths());
     }
-    
+
     // ----------------------------------------------------------
     /**
      * Test method for ratio calculator
@@ -71,7 +70,7 @@ public class RaceTest extends student.TestCase {
         assertEquals(-1, latin.getRatio(), 0.1);
         assertEquals(-1, other.getRatio(), 0.1);
     }
-    
+
     // ----------------------------------------------------------
     /**
      * Test method for toString
@@ -79,7 +78,7 @@ public class RaceTest extends student.TestCase {
     public void testToString() {
         assertEquals("(Race: White, Cases: 10, Deaths: 5)", white.toString());
     }
-    
+
     // ----------------------------------------------------------
     /**
      * Test method for equals method
@@ -90,11 +89,11 @@ public class RaceTest extends student.TestCase {
         assertFalse(white.equals(nullTest));
         assertTrue(white.equals(white));
         assertFalse(white.equals(black));
-        
+
         Race same = new Race("White", 10, 5);
-        
+
         assertTrue(white.equals(same));
-        
+
         assertFalse(white.equals("Hello"));
         assertFalse(white.equals(new Race("White", 20, 5)));
         assertFalse(white.equals(new Race("White", 10, 15)));

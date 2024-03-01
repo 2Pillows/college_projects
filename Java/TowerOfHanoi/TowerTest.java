@@ -6,10 +6,9 @@ package towerofhanoi;
 /**
  * Test class for the Tower class
  * 
- * The TowerTest class used a library from VT in its Build Path which is why it won't compile.
+ * The TowerTest class used a library from VT in its Build Path which is why it
+ * won't compile.
  * 
- * @author henrysmith
- * @version Oct 19, 2020
  */
 public class TowerTest extends student.TestCase {
 
@@ -43,21 +42,19 @@ public class TowerTest extends student.TestCase {
         left.push(new Disk(8));
         assertEquals("[8, 10]", left.toString());
 
-        //If adding a larger disk then catches an error.
+        // If adding a larger disk then catches an error.
         Exception illegal = null;
         try {
             left.push(new Disk(15));
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             illegal = exception;
         }
         assertTrue(illegal instanceof IllegalStateException);
 
-        //If adding a null disks catches an error.
+        // If adding a null disks catches an error.
         try {
             left.push(null);
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             illegal = exception;
         }
         assertTrue(illegal instanceof IllegalArgumentException);

@@ -1,40 +1,38 @@
-/**
- * 
- */
+
 package xmltograph;
 
 /**
  * Creates State object that holds state name and SinglyLinkedList of
  * Race objects.
  * 
- * @author Henry Smith
- * @version Nov 13, 2020
  */
 public class State {
 
-    //~ Instance/static variables .............................................
+    // ~ Instance/static variables .............................................
 
     private String name;
     private SinglyLinkedList<Race> races;
 
-    //~ Constructors ..........................................................
+    // ~ Constructors ..........................................................
 
     // ----------------------------------------------------------
     /**
      * Creates a State object with given state name and array of Race objects
+     * 
      * @param stateName Name of the state
-     * @param raceList Race objects under the specified State name
+     * @param raceList  Race objects under the specified State name
      */
     public State(String stateName, SinglyLinkedList<Race> raceList) {
         name = stateName;
         races = raceList;
     }
 
-    //~ Public Methods ........................................................
+    // ~ Public Methods ........................................................
 
     // ----------------------------------------------------------
     /**
      * Getter for name of State.
+     * 
      * @return The name of State.
      */
     public String getName() {
@@ -44,6 +42,7 @@ public class State {
     // ----------------------------------------------------------
     /**
      * Getter for Race array for State.
+     * 
      * @return Race array of State
      */
     public SinglyLinkedList<Race> getRaces() {
@@ -53,8 +52,9 @@ public class State {
     // ----------------------------------------------------------
     /**
      * Gives String of the data inside the State.
+     * 
      * @return String representation of State in format:
-     * "(State: (name) [(toString of Race)])"
+     *         "(State: (name) [(toString of Race)])"
      */
     public String toString() {
         StringBuilder state = new StringBuilder();
@@ -72,6 +72,7 @@ public class State {
     /**
      * If two States have the same name and Race array they are considered
      * equal.
+     * 
      * @param obj Another Object compared to this State.
      * @return True or false if this State equals Object obj.
      */
@@ -87,14 +88,14 @@ public class State {
         }
 
         State other = (State) obj;
-        if (! this.getName().equals(other.getName())) {
+        if (!this.getName().equals(other.getName())) {
             return false;
         }
         if (races.size() != other.races.size()) {
             return false;
         }
         for (int i = 0; i < races.size(); i++) {
-            if (! races.get(i).equals(other.races.get(i))) {
+            if (!races.get(i).equals(other.races.get(i))) {
                 return false;
             }
         }

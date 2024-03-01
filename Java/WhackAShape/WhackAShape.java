@@ -18,15 +18,14 @@ import student.TestableRandom;
  * WhackAShape class that will create the window and shapes
  * for the project.
  * 
- * The WhackAShape class used a library from VT in its Build Path which is why it won't compile.
+ * The WhackAShape class used a library from VT in its Build Path which is why
+ * it won't compile.
  * 
- * @author henrysmith
- * @version Oct 4, 2020
  */
 public class WhackAShape {
 
     /**
-     * Creates the fields bag, the window, and a 
+     * Creates the fields bag, the window, and a
      * random number generator.
      */
     private SimpleBagInterface<Shape> bag;
@@ -34,7 +33,7 @@ public class WhackAShape {
     private TestableRandom randomGenerator;
 
     /**
-     * Constructor for WhackAShape. Instantiates the 
+     * Constructor for WhackAShape. Instantiates the
      * fields above, adds a quit button to the window,
      * and will add one of each shape to the bag.
      */
@@ -52,7 +51,6 @@ public class WhackAShape {
         bag.add(buildShape("blue circle"));
         bag.add(buildShape("blue square"));
 
-
         window.addShape(bag.pick());
     }
 
@@ -60,6 +58,7 @@ public class WhackAShape {
      * Constructor that will add specified objects into the
      * bag. Adds a quit button and instantiates fields
      * similarly to default constructor.
+     * 
      * @param str
      */
     public WhackAShape(String[] str) {
@@ -75,8 +74,7 @@ public class WhackAShape {
             for (int i = 0; i < str.length; i++) {
                 bag.add(buildShape(str[i]));
             }
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
         window.addShape(bag.pick());
@@ -84,6 +82,7 @@ public class WhackAShape {
 
     /**
      * Returns the bag.
+     * 
      * @return bag of Shape objects
      */
     public SimpleBagInterface<Shape> getBag() {
@@ -92,6 +91,7 @@ public class WhackAShape {
 
     /**
      * Returns the window.
+     * 
      * @return window with shapes and quit button
      */
     public Window getWindow() {
@@ -100,6 +100,7 @@ public class WhackAShape {
 
     /**
      * Will exit the window when button is clicked.
+     * 
      * @param source the button clicked
      */
     public void clickedQuit(Button source) {
@@ -107,11 +108,12 @@ public class WhackAShape {
     }
 
     /**
-     * When a shape is clicked, remove the shape and 
+     * When a shape is clicked, remove the shape and
      * add another. If the bag is empty then
      * the game is over.
+     * 
      * @param shape The shape that was clicked and
-     * will be remvoed.
+     *              will be remvoed.
      */
     public void clickedShape(Shape shape) {
         window.removeShape(shape);
@@ -128,17 +130,17 @@ public class WhackAShape {
             endText.setY(height - (endText.getHeight() / 2));
 
             window.addShape(endText);
-        }
-        else {
+        } else {
             window.addShape(nextShape);
         }
 
     }
 
     /**
-     * Creates a shape using a String input. Can be 
-     * a circle or shape of red or blue color. If not 
+     * Creates a shape using a String input. Can be
+     * a circle or shape of red or blue color. If not
      * one of those options then throws an error.
+     * 
      * @param input String that describes shape to be made.
      * @return A Shape of the specified color and shape
      */
@@ -154,34 +156,27 @@ public class WhackAShape {
 
         if (input.contains("red")) {
             colorIsRed = true;
-        }
-        else if (input.contains("blue")) {
+        } else if (input.contains("blue")) {
             colorIsRed = false;
-        }
-        else {
+        } else {
             throw new IllegalArgumentException("No Color in String");
         }
 
         if (input.contains("circle")) {
             shapeIsCircle = true;
-        }
-        else if (input.contains("square")) {
+        } else if (input.contains("square")) {
             shapeIsCircle = false;
-        }
-        else {
+        } else {
             throw new IllegalArgumentException("No Color in String");
         }
 
         if (colorIsRed && shapeIsCircle) {
             currentShape = new CircleShape(indexX, indexY, size, Color.RED);
-        }
-        else if (!(colorIsRed) && shapeIsCircle) {
+        } else if (!(colorIsRed) && shapeIsCircle) {
             currentShape = new CircleShape(indexX, indexY, size, Color.BLUE);
-        }
-        else if (colorIsRed && !(shapeIsCircle)) {
+        } else if (colorIsRed && !(shapeIsCircle)) {
             currentShape = new SquareShape(indexX, indexY, size, Color.RED);
-        }
-        else if (!(colorIsRed) && !(shapeIsCircle)) {
+        } else if (!(colorIsRed) && !(shapeIsCircle)) {
             currentShape = new SquareShape(indexX, indexY, size, Color.BLUE);
         }
 

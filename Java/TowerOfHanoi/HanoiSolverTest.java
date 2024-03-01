@@ -6,10 +6,8 @@ package towerofhanoi;
 /**
  * Test class for the HanoiSolver class
  * 
- * The HanoiSolverTest class used a library from VT in its Build Path which is why it won't compile.
- * 
- * @author henrysmith
- * @version Oct 19, 2020
+ * The HanoiSolverTest class used a library from VT in its Build Path which is
+ * why it won't compile.
  */
 public class HanoiSolverTest extends student.TestCase {
 
@@ -24,7 +22,7 @@ public class HanoiSolverTest extends student.TestCase {
 
     /**
      * Instantiates the HanoiSolver and adds disks to the
-     * right tower. Also sets each tower to the local 
+     * right tower. Also sets each tower to the local
      * towers.
      */
     public void setUp() {

@@ -2,21 +2,20 @@ package xmltograph;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+
 /**
  * Creates SinglyLinkedList of any Object.
  * 
- * @author Henry Smith
- * @version Nov 13, 2020
  * @param <T> Any object stored inside the a singly linked list
  */
 public class SinglyLinkedList<T> {
 
-    //~ Instance/static variables .............................................
+    // ~ Instance/static variables .............................................
 
     private Node<T> head;
     private int size;
 
-    //~ Constructors ..........................................................
+    // ~ Constructors ..........................................................
 
     // ----------------------------------------------------------
     /**
@@ -27,11 +26,12 @@ public class SinglyLinkedList<T> {
         size = 0;
     }
 
-    //~ Public Methods ........................................................
+    // ~ Public Methods ........................................................
 
     // ----------------------------------------------------------
     /**
      * Getter for number of objects in list.
+     * 
      * @return the number of elements
      */
     public int size() {
@@ -41,6 +41,7 @@ public class SinglyLinkedList<T> {
     // ----------------------------------------------------------
     /**
      * Adds the object to the end of the list.
+     * 
      * @precondition obj cannot be null
      * @param obj the object to add
      * @throws IllegalArgumentException if obj is null
@@ -54,8 +55,7 @@ public class SinglyLinkedList<T> {
 
         if (isEmpty()) {
             head = new Node<T>(obj);
-        }
-        else {
+        } else {
             while (current.next != null) {
                 current = current.next;
             }
@@ -67,9 +67,10 @@ public class SinglyLinkedList<T> {
     // ----------------------------------------------------------
     /**
      * Adds the object at specified index.
+     * 
      * @precondition obj cannot be null
      * @param index Where the obj will be added
-     * @param obj The item to be added
+     * @param obj   The item to be added
      */
     public void add(int index, T obj) {
         Node<T> current = head;
@@ -78,8 +79,7 @@ public class SinglyLinkedList<T> {
             Node<T> newNode = new Node<T>(obj);
             newNode.setNext(head);
             head = newNode;
-        }
-        else {
+        } else {
             int currentIndex = 0;
             while (current != null) {
                 if ((currentIndex + 1) == index) {
@@ -98,13 +98,14 @@ public class SinglyLinkedList<T> {
     // ----------------------------------------------------------
     /**
      * Removes item at specified index.
+     * 
      * @param index The index to be removed
      * @return True or false if item was removed
      */
     public boolean remove(int index) {
         Node<T> current = head;
         int currentIndex = 0;
-        
+
         while (current.next != null) {
             if ((currentIndex + 1) == index) {
                 Node<T> newNext = current.next.next;
@@ -121,6 +122,7 @@ public class SinglyLinkedList<T> {
     // ----------------------------------------------------------
     /**
      * Checks if the array is empty
+     * 
      * @return True if the array is empty
      */
     public boolean isEmpty() {
@@ -130,6 +132,7 @@ public class SinglyLinkedList<T> {
     // ----------------------------------------------------------
     /**
      * Gets the object at the given position
+     * 
      * @param index where the object is located
      * @return The object at the given position
      * @throws IndexOutOfBoundsException if no node at the given index
@@ -138,7 +141,7 @@ public class SinglyLinkedList<T> {
         Node<T> current = head;
         int currentIndex = 0;
         T data = null;
-        
+
         while (current != null) {
             if (currentIndex == index) {
                 data = current.data;
@@ -157,6 +160,7 @@ public class SinglyLinkedList<T> {
     /**
      * Returns a string representation of the list if a list contains A, B, and
      * C, the following should be returned "{A, B, C}"
+     * 
      * @return a string representing the list
      */
     public String toString() {
@@ -178,6 +182,7 @@ public class SinglyLinkedList<T> {
     /**
      * Returns true if both lists have the exact same contents
      * in the exact same order
+     * 
      * @param obj Object that is compared against this
      * @return a boolean of whether two lists have the same contents,
      *         item per item and in the same order
@@ -191,7 +196,7 @@ public class SinglyLinkedList<T> {
         }
         if (this.getClass() == obj.getClass()) {
             @SuppressWarnings("unchecked")
-            SinglyLinkedList<T> other = ((SinglyLinkedList<T>)obj);
+            SinglyLinkedList<T> other = ((SinglyLinkedList<T>) obj);
             if (other.size() == this.size()) {
                 Node<T> current = head;
                 Node<T> otherCurrent = other.head;
@@ -216,9 +221,9 @@ public class SinglyLinkedList<T> {
      */
     public Iterator<T> iterator() {
         return new ListIterator<T>();
-    } 
-    
-    //~ Inner Class ..........................................................
+    }
+
+    // ~ Inner Class ..........................................................
 
     /**
      * Inner Iterator class that traverses SinglyLinkedLists.
@@ -226,14 +231,14 @@ public class SinglyLinkedList<T> {
      * @param <E> The type of list that will be iterated.
      */
     private class ListIterator<E> implements Iterator<T> {
-        
-        //~ Instance/static variables .......................................
+
+        // ~ Instance/static variables .......................................
 
         private int index;
         private T removeData;
-       
-        //~ Constructors ....................................................
-        
+
+        // ~ Constructors ....................................................
+
         /**
          * Sets index to 0 and removeData to null.
          */
@@ -241,12 +246,13 @@ public class SinglyLinkedList<T> {
             index = 0;
             removeData = null;
         }
-        
-        //~ Public Methods .....................................................
-        
+
+        // ~ Public Methods .....................................................
+
         // ----------------------------------------------------------
         /**
          * Checks if there are more elements in the list.
+         * 
          * @return True if list has a next item.
          */
         @Override
@@ -257,9 +263,10 @@ public class SinglyLinkedList<T> {
         // ----------------------------------------------------------
         /**
          * Increments iterator and returns last item.
+         * 
          * @return Last value skipped by iterator
          * @throws NoSuchElementException
-         *             if there are no nodes left in the list.
+         *                                if there are no nodes left in the list.
          */
         @Override
         public T next() {
@@ -271,34 +278,37 @@ public class SinglyLinkedList<T> {
         }
     }
 
-    //~ Inner Class ..........................................................
-    
+    // ~ Inner Class ..........................................................
+
     /**
      * Inner Node Class that stores data in Node and next Node
+     * 
      * @param <D> Item stored inside Nodes
      */
     public static class Node<D> {
 
-        //~ Instance/static variables .......................................
+        // ~ Instance/static variables .......................................
         private D data;
         private Node<D> next;
 
-        //~ Constructors ....................................................
+        // ~ Constructors ....................................................
 
         // ----------------------------------------------------------
         /**
          * Instantiates data of Node with parameter.
+         * 
          * @param d The data to put inside the node.
          */
         public Node(D d) {
             data = d;
         }
 
-        //~ Public Methods .....................................................
-       
+        // ~ Public Methods .....................................................
+
         // ----------------------------------------------------------
         /**
          * Sets the node after current Node.
+         * 
          * @param n The node after this current Node.
          */
         public void setNext(Node<D> n) {
@@ -308,6 +318,7 @@ public class SinglyLinkedList<T> {
         // ----------------------------------------------------------
         /**
          * Getter for next Node.
+         * 
          * @return The next Node.
          */
         public Node<D> next() {
@@ -317,6 +328,7 @@ public class SinglyLinkedList<T> {
         // ----------------------------------------------------------
         /**
          * Getter for data in current Node.
+         * 
          * @return The data in the node.
          */
         public D getData() {

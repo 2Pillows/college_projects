@@ -1,9 +1,5 @@
 /*
 ------------------------------------------------------------------------
- Program Name: CTA 5
- Author: Henry Smith
- Date: 2/19/2023
-------------------------------------------------------------------------
  Pseudocode: Gets input from user and appends to existing text file. Then reads the said file, reverses the characters for each line and writes to a new file.
 ------------------------------------------------------------------------
  Program Inputs: User input

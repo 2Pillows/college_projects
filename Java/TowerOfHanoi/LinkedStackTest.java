@@ -8,10 +8,8 @@ import java.util.EmptyStackException;
 /**
  * Test class for the LinkedStack class
  * 
- * The LinkedStackTest class used a library from VT in its Build Path which is why it won't compile.\
- * 
- * @author henrysmith
- * @version Oct 19, 2020
+ * The LinkedStackTest class used a library from VT in its Build Path which is
+ * why it won't compile.\
  */
 public class LinkedStackTest extends student.TestCase {
 
@@ -57,8 +55,7 @@ public class LinkedStackTest extends student.TestCase {
         Exception empty = null;
         try {
             stack.peek();
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             empty = exception;
         }
         assertTrue(empty instanceof EmptyStackException);
@@ -89,8 +86,7 @@ public class LinkedStackTest extends student.TestCase {
         Exception empty = null;
         try {
             stack.pop();
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             empty = exception;
         }
         assertTrue(empty instanceof EmptyStackException);
@@ -104,13 +100,13 @@ public class LinkedStackTest extends student.TestCase {
     }
 
     /**
-     * Test method for toString. Gives string array of 
+     * Test method for toString. Gives string array of
      * items in the stack.
      */
     public void testToString() {
         assertEquals("[]", stack.toString());
         stack.push("Hello");
-        stack.push("Goodbye");       
+        stack.push("Goodbye");
         assertEquals("[Goodbye, Hello]", stack.toString());
     }
 

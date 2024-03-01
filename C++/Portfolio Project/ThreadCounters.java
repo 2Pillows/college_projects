@@ -1,10 +1,6 @@
 
 /*
 ------------------------------------------------------------------------
- Program Name: Portfolio Project
- Author: Henry Smith
- Date: 3/12/2023
-------------------------------------------------------------------------
  Pseudocode: Two threads are created to count up to 20 and down to 20. Threads are managed using lock and reentrantlock to prevent parallel execution
 ------------------------------------------------------------------------
  Program Inputs: N/A

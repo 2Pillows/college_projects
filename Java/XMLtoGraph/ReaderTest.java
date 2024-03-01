@@ -3,37 +3,36 @@ package xmltograph;
 import java.io.FileNotFoundException;
 
 /**
- * Not needed for the project but used to test if the Reader was 
+ * Not needed for the project but used to test if the Reader was
  * properly gathering data from File.
  * 
- * The ReaderTest class used a library from VT in its Build Path which is why it won't compile.
- * 
- * @author Henry Smith
- * @version Nov 13, 2020
+ * The ReaderTest class used a library from VT in its Build Path which is why it
+ * won't compile.
  */
 public class ReaderTest extends student.TestCase {
 
-    //~ Instance/static variables .............................................
+    // ~ Instance/static variables .............................................
 
     private SinglyLinkedList<State> states;
 
-    //~ Constructors ..........................................................
+    // ~ Constructors ..........................................................
 
     /**
      * Instantiates each variable for when each method runs.
+     * 
      * @throws FileNotFoundException In-case File isn't found with fileName
      */
     public void setUp() throws FileNotFoundException {
         Reader rdr = new Reader("Cases_and_Deaths_by_race_CRDT_Sep2020.csv");
-        
+
         states = rdr.getState();
     }
 
-    //~ Public Methods ........................................................
+    // ~ Public Methods ........................................................
 
     // ----------------------------------------------------------
     /**
-     * Test method to ensure File is properly being read and stored in 
+     * Test method to ensure File is properly being read and stored in
      * State and Race objects.
      */
     public void testGetState() {
@@ -45,10 +44,10 @@ public class ReaderTest extends student.TestCase {
         temp[4] = new Race("Other", 108784, 170);
 
         assertEquals("(State: DC [(Race: White, Cases: 70678, Deaths: 1924)"
-            + "(Race: Black, Cases: 179563, Deaths: 13365)"
-            + "(Race: LatinX, Cases: 97118, Deaths: 2269)"
-            + "(Race: Asian, Cases: 5407, Deaths: 254)"
-            + "(Race: Other, Cases: 108784, Deaths: 170)])", 
-            states.get(0).toString());
+                + "(Race: Black, Cases: 179563, Deaths: 13365)"
+                + "(Race: LatinX, Cases: 97118, Deaths: 2269)"
+                + "(Race: Asian, Cases: 5407, Deaths: 254)"
+                + "(Race: Other, Cases: 108784, Deaths: 170)])",
+                states.get(0).toString());
     }
 }

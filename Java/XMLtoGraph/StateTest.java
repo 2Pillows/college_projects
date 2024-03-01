@@ -1,19 +1,15 @@
-/**
- * 
- */
 package xmltograph;
 
 /**
  * Test class for State
  * 
- * The StateTest class used a library from VT in its Build Path which is why it won't compile.
+ * The StateTest class used a library from VT in its Build Path which is why it
+ * won't compile.
  * 
- * @author Henry Smith
- * @version Nov 13, 2020
  */
 public class StateTest extends student.TestCase {
 
-    //~ Instance/static variables .............................................
+    // ~ Instance/static variables .............................................
 
     private State virginia;
     private State same;
@@ -21,7 +17,7 @@ public class StateTest extends student.TestCase {
     private State diffRace;
     private SinglyLinkedList<Race> races2;
 
-    //~ Constructors ..........................................................
+    // ~ Constructors ..........................................................
 
     // ----------------------------------------------------------
     /**
@@ -50,7 +46,7 @@ public class StateTest extends student.TestCase {
         diffRace = new State("Virginia", otherRace);
     }
 
-    //~ Public Methods ........................................................
+    // ~ Public Methods ........................................................
 
     // ----------------------------------------------------------
     /**
@@ -64,7 +60,7 @@ public class StateTest extends student.TestCase {
     /**
      * Test method for getRace().
      */
-    public void testGetRaces() { 
+    public void testGetRaces() {
         assertEquals(races2.get(0), virginia.getRaces().get(0));
         assertEquals(races2.get(1), virginia.getRaces().get(1));
     }
@@ -75,7 +71,7 @@ public class StateTest extends student.TestCase {
      */
     public void testToString() {
         assertEquals("(State: Virginia [(Race: White, Cases: 10, Deaths: 5)"
-            + "(Race: Black, Cases: 20, Deaths: 5)])", virginia.toString());
+                + "(Race: Black, Cases: 20, Deaths: 5)])", virginia.toString());
     }
 
     // ----------------------------------------------------------

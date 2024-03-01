@@ -7,14 +7,13 @@ import bag.SimpleBagInterface;
 import student.TestableRandom;
 
 /**
- * Creates a ArrayBag that will store T objects of a 
+ * Creates a ArrayBag that will store T objects of a
  * total length of 25. Includes method to add, get size,
  * test if empty, pick a random object, and remove.
  * 
- * The SimpleArrayBag class used a library from VT in its Build Path which is why it won't compile.
+ * The SimpleArrayBag class used a library from VT in its Build Path which is
+ * why it won't compile.
  * 
- * @author henrysmith
- * @version Oct 4, 2020
  * @param <T> Any Object that will be used in the bag
  */
 
@@ -29,7 +28,7 @@ public class SimpleArrayBag<T> implements SimpleBagInterface<T> {
     private int numberOfEntries;
 
     /**
-     * Constructor that instantiates the fields 
+     * Constructor that instantiates the fields
      * above
      */
     public SimpleArrayBag() {
@@ -40,7 +39,7 @@ public class SimpleArrayBag<T> implements SimpleBagInterface<T> {
     }
 
     /**
-     * Will add an object T to the array. If 
+     * Will add an object T to the array. If
      * array is full or object T is null return false.
      */
     @Override
@@ -74,15 +73,15 @@ public class SimpleArrayBag<T> implements SimpleBagInterface<T> {
     }
 
     /**
-     * Will return a random Object from array bag. 
+     * Will return a random Object from array bag.
      * If bag is empty return null;
      */
     @Override
-    public T pick() {     
+    public T pick() {
         if (isEmpty()) {
             return null;
         }
-        TestableRandom generator = new TestableRandom(); 
+        TestableRandom generator = new TestableRandom();
         int index = generator.nextInt(numberOfEntries);
 
         return bag[index];
@@ -111,9 +110,10 @@ public class SimpleArrayBag<T> implements SimpleBagInterface<T> {
     /**
      * Returns the index of anEntry inside
      * the array bag.
+     * 
      * @param anEntry T Object to be found in array
      * @return the int index of where the object
-     * is in the array.
+     *         is in the array.
      */
     private int getIndexOf(T anEntry) {
         for (int i = 0; i < numberOfEntries; i++) {

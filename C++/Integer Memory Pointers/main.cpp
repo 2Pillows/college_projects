@@ -1,9 +1,5 @@
 /*
 ------------------------------------------------------------------------
- Program Name: CTA 3
- Author: Henry Smith
- Date: 2/5/2023
-------------------------------------------------------------------------
  Pseudocode: Collects 3 integers from user. Using those integers, create pointers to dynamic memory. Display the content and pointers for each variable. Delete any variables to manage memory.
 ------------------------------------------------------------------------
  Program Inputs: 3 integers

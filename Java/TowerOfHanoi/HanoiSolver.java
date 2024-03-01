@@ -6,13 +6,12 @@ package towerofhanoi;
 import java.util.Observable;
 
 /**
- * Solves the Tower of Hanoi in 
+ * Solves the Tower of Hanoi in
  * the stack of the Disks.
  * 
- * The HanoiSolver class used a library from VT in its Build Path which is why it won't compile.
+ * The HanoiSolver class used a library from VT in its Build Path which is why
+ * it won't compile.
  * 
- * @author henrysmith
- * @version Oct 18, 2020
  */
 public class HanoiSolver extends Observable {
 
@@ -28,8 +27,9 @@ public class HanoiSolver extends Observable {
 
     /**
      * Constructor that passes the number of disks
-     * into local variable and instantiates the 
+     * into local variable and instantiates the
      * towers to their given positions.
+     * 
      * @param disks the number of disks
      */
     public HanoiSolver(int disks) {
@@ -41,6 +41,7 @@ public class HanoiSolver extends Observable {
 
     /**
      * Getter for the number of disks
+     * 
      * @return The total number of disks
      */
     public int disks() {
@@ -49,13 +50,14 @@ public class HanoiSolver extends Observable {
 
     /**
      * Getter for Towers depending on position
+     * 
      * @param position Where the tower is located
      * @return The Tower object
      */
     public Tower getTower(Position position) {
-        //Since we are used an enum use switch to 
-        //return the correct Tower
-        switch(position) {
+        // Since we are used an enum use switch to
+        // return the correct Tower
+        switch (position) {
             case LEFT:
                 return left;
             case RIGHT:
@@ -69,6 +71,7 @@ public class HanoiSolver extends Observable {
 
     /**
      * Returns a String of the widths of each disk in each Tower
+     * 
      * @return The widths of each disk in each tower from smallest to largest
      */
     public String toString() {
@@ -77,16 +80,16 @@ public class HanoiSolver extends Observable {
 
     /**
      * Moves a disk from one tower to another
-     * @param source Current position of the disk
+     * 
+     * @param source      Current position of the disk
      * @param destination Where the disk will be moved to
      */
     private void move(Tower source, Tower destination) {
-        //If the source tower is empty then a Exception 
-        //will be thrown.
+        // If the source tower is empty then a Exception
+        // will be thrown.
         try {
             destination.push(source.pop());
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             /**
              * Cannot add when the source is empty.
              * This will be called in the recursion
@@ -94,32 +97,33 @@ public class HanoiSolver extends Observable {
              * will stop.
              */
         }
-        //Updates the Observer that a disk moved and gives 
-        //the position of the new tower
+        // Updates the Observer that a disk moved and gives
+        // the position of the new tower
         setChanged();
         notifyObservers(destination.position());
     }
 
     /**
      * Recursive method to solve the Tower of Hanoi.
+     * 
      * @param currentDisks The current disk
-     * @param startPole Where the disk is currently
-     * @param tempPole Where the disk will move to temporarily
-     * @param endPole Where the disk will end
+     * @param startPole    Where the disk is currently
+     * @param tempPole     Where the disk will move to temporarily
+     * @param endPole      Where the disk will end
      */
     private void solveTowers(
-        int currentDisks, Tower startPole, Tower tempPole, Tower endPole) {
-        //Base case when there are no more disks
+            int currentDisks, Tower startPole, Tower tempPole, Tower endPole) {
+        // Base case when there are no more disks
         if (currentDisks == 0) {
             return;
         }
-        //Get all of the disks above the bottom disk to the tempPole
+        // Get all of the disks above the bottom disk to the tempPole
         solveTowers(currentDisks - 1, startPole, endPole, tempPole);
-        
-        //Move the last disk to the endPole
+
+        // Move the last disk to the endPole
         move(startPole, endPole);
-        
-        //Move the smaller disks to the endPole
+
+        // Move the smaller disks to the endPole
         solveTowers(currentDisks - 1, tempPole, startPole, endPole);
     }
 
@@ -127,8 +131,8 @@ public class HanoiSolver extends Observable {
      * Method that will be used in other classes to solve the Tower of Hanoi
      */
     public void solve() {
-        //The number of given in the HanoiSolver constructor and moving
-        //disks from right pole to left pole.
+        // The number of given in the HanoiSolver constructor and moving
+        // disks from right pole to left pole.
         solveTowers(numDisks, right, middle, left);
     }
 }

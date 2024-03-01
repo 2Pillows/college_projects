@@ -1,39 +1,40 @@
 package xmltograph;
 
 import java.util.Iterator;
+
 /**
  * Handles the back-end for Linked Lists for
  * States and Races.
- *  
- * @author Henry Smith
- * @version Nov 13, 2020
+ * 
  */
 public class Calculator {
 
-    //~ Instance/static variables .............................................
+    // ~ Instance/static variables .............................................
 
     private SinglyLinkedList<State> states;
     private SinglyLinkedList<Race> stateRaces;
 
-    //~ Constructors ..........................................................
+    // ~ Constructors ..........................................................
 
     // ----------------------------------------------------------
     /**
      * Calculator used in order to manipulate the back end of the project
+     * 
      * @param stateList SinglyLinkedList of State objects
      */
     public Calculator(SinglyLinkedList<State> stateList) {
         states = stateList;
 
-        //Linked List of Races specific to State
+        // Linked List of Races specific to State
         stateRaces = null;
     }
 
-    //~ Public Methods ........................................................
+    // ~ Public Methods ........................................................
 
     // ----------------------------------------------------------
     /**
      * Finds the State object whose name is equal to parameter.
+     * 
      * @param name The name of the State object.
      * @return The State object equal to name in parameter.
      */
@@ -42,7 +43,7 @@ public class Calculator {
         State foundState = null;
 
         while (iter.hasNext()) {
-            State tempState = (State)iter.next();
+            State tempState = (State) iter.next();
             if (name.equals(tempState.getName())) {
                 foundState = tempState;
             }
@@ -56,16 +57,16 @@ public class Calculator {
      * for all states.
      */
     public void sortRacesAlpha() {
-        //Loop for each State
+        // Loop for each State
         for (int a = 0; a < states.size(); a++) {
             stateRaces = states.get(a).getRaces();
 
-            //Continue checking order until no swap is made
-            boolean swap = true;           
+            // Continue checking order until no swap is made
+            boolean swap = true;
             while (swap) {
                 swap = false;
 
-                //Loop though Races in State
+                // Loop though Races in State
                 for (int i = 0; i < stateRaces.size() - 1; i++) {
                     swap = swap || sortAlphaIndex(i);
                 }
@@ -76,6 +77,7 @@ public class Calculator {
     // ----------------------------------------------------------
     /**
      * Sorts Linked List of Race objects at index i.
+     * 
      * @param i Index in SinglyLinkedList of Races.
      * @return True or false if the sort was successful.
      */
@@ -107,21 +109,21 @@ public class Calculator {
     // ----------------------------------------------------------
     /**
      * Sorts SinglyLinkedList of Race objects for all states
-     * in order by Case Fatality Ratio. If two Races have the 
+     * in order by Case Fatality Ratio. If two Races have the
      * same CFR then they are sorted by if their cases were
      * given or N/A and then alphabetically.
      */
     public void sortRacesCFR() {
-        //Loop though States
+        // Loop though States
         for (int a = 0; a < states.size(); a++) {
             stateRaces = states.get(a).getRaces();
 
-            //Continue checking order until no swap is made
+            // Continue checking order until no swap is made
             boolean swap = true;
             while (swap) {
                 swap = false;
 
-                //Loop though Races in State
+                // Loop though Races in State
                 for (int i = 0; i < stateRaces.size() - 1; i++) {
                     Race firstRace = stateRaces.get(i);
                     Race secondRace = stateRaces.get(i + 1);
@@ -131,8 +133,8 @@ public class Calculator {
                         swap = true;
                     }
 
-                    //If ratios are equal then sort by if cases are -1
-                    //and then alphabetically
+                    // If ratios are equal then sort by if cases are -1
+                    // and then alphabetically
                     if (firstRace.getRatio() == secondRace.getRatio()) {
                         swap = swap || sortAlphaIndex(i);
                     }
@@ -144,6 +146,7 @@ public class Calculator {
     // ----------------------------------------------------------
     /**
      * Swaps the Race after index with race on index
+     * 
      * @param i Index in SinglyLinkedList of Race objects
      */
     private void swapRaces(int i) {

@@ -1,9 +1,5 @@
 /*
 ------------------------------------------------------------------------
- Program Name: CTA 1 Option #1
- Author: Henry Smith
- Date: 1/22/2023
-------------------------------------------------------------------------
  Pseudocode: Prints first name, last name, street address, city, and zip code
  of a finctional person.
 ------------------------------------------------------------------------

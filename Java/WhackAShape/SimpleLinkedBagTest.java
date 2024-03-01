@@ -6,20 +6,17 @@ package game;
 /**
  * Test method for SimpleLinkedBag
  * 
- * The SimpleLinkedBagTest class used a library from VT in its Build Path which is why it won't compile.
+ * The SimpleLinkedBagTest class used a library from VT in its Build Path which
+ * is why it won't compile.
  * 
- * @author henrysmith
- * @version Oct 4, 2020
  */
 public class SimpleLinkedBagTest extends student.TestCase {
 
     /**
      * Creates the fields to test SimpleLinkedBag
      */
-    private SimpleLinkedBag<String> bag = 
-        new SimpleLinkedBag<String>();
-    private SimpleLinkedBag<String> emptyBag = 
-        new SimpleLinkedBag<String>();
+    private SimpleLinkedBag<String> bag = new SimpleLinkedBag<String>();
+    private SimpleLinkedBag<String> emptyBag = new SimpleLinkedBag<String>();
 
     /**
      * Instantiates bag with three objects.
@@ -64,14 +61,14 @@ public class SimpleLinkedBagTest extends student.TestCase {
         for (int i = 0; i < bag.getCurrentSize(); i++) {
             String rndmString = bag.pick();
             assertTrue(rndmString.equals("Animal")
-                || rndmString.equals("Bat")
-                || rndmString.equals("Cat"));
+                    || rndmString.equals("Bat")
+                    || rndmString.equals("Cat"));
             bag.remove(rndmString);
         }
     }
 
     /**
-     * Test method for remove. Returns false if object to 
+     * Test method for remove. Returns false if object to
      * be removed is null or not in bag.
      */
     public void testRemove() {

@@ -8,14 +8,13 @@ import bag.Node;
 import student.TestableRandom;
 
 /**
- * Class that creates an single linked array. Includes 
- * methods for adding, removing, getting size, testing 
+ * Class that creates an single linked array. Includes
+ * methods for adding, removing, getting size, testing
  * if empty, and returning a random object from bag.
  * 
- * The SimpleLinkedBag class used a library from VT in its Build Path which is why it won't compile.
+ * The SimpleLinkedBag class used a library from VT in its Build Path which is
+ * why it won't compile.
  * 
- * @author henrysmith
- * @version Oct 4, 2020
  * @param <T> Any object that will be added to the bag
  */
 public class SimpleLinkedBag<T> implements SimpleBagInterface<T> {
@@ -43,7 +42,7 @@ public class SimpleLinkedBag<T> implements SimpleBagInterface<T> {
     public boolean add(T newEntry) {
         if (newEntry == null) {
             return false;
-        }        
+        }
         Node<T> newNode = new Node<T>(newEntry, firstNode);
         firstNode = newNode;
         numberOfEntries++;
@@ -75,7 +74,7 @@ public class SimpleLinkedBag<T> implements SimpleBagInterface<T> {
         if (isEmpty()) {
             return null;
         }
-        TestableRandom generator = new TestableRandom(); 
+        TestableRandom generator = new TestableRandom();
         int index = generator.nextInt(numberOfEntries);
         Node<T> currentNode = firstNode;
 
@@ -92,7 +91,7 @@ public class SimpleLinkedBag<T> implements SimpleBagInterface<T> {
      * in the bag returns false;
      */
     @Override
-    public boolean remove(T anEntry) {    
+    public boolean remove(T anEntry) {
         if (anEntry == null) {
             return false;
         }
@@ -113,6 +112,7 @@ public class SimpleLinkedBag<T> implements SimpleBagInterface<T> {
 
     /**
      * Returns the Node that has a specified object.
+     * 
      * @param anEntry Object that will be removed
      * @return Node that includes the object to be removed
      */
@@ -123,8 +123,7 @@ public class SimpleLinkedBag<T> implements SimpleBagInterface<T> {
         while (!found && (currentNode != null)) {
             if (anEntry.equals(currentNode.getData())) {
                 found = true;
-            }
-            else {
+            } else {
                 currentNode = currentNode.getNext();
             }
         }

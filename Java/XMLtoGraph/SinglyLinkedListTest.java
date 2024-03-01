@@ -1,7 +1,6 @@
-/**
- * 
- */
+
 package xmltograph;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -10,14 +9,13 @@ import xmltograph.SinglyLinkedList.Node;
 /**
  * Test class for SinglyLinkedList
  * 
- * The SinglyLinkedlistTest class used a library from VT in its Build Path which is why it won't compile.
+ * The SinglyLinkedlistTest class used a library from VT in its Build Path which
+ * is why it won't compile.
  * 
- * @author Henry Smith
- * @version Nov 13, 2020
  */
 public class SinglyLinkedListTest extends student.TestCase {
-    
-    //~ Instance/static variables .............................................
+
+    // ~ Instance/static variables .............................................
 
     private SinglyLinkedList<String> list;
     private SinglyLinkedList<String> same;
@@ -27,8 +25,8 @@ public class SinglyLinkedListTest extends student.TestCase {
     private String difClass;
     private Node<String> node;
 
-    //~ Constructors ..........................................................
-    
+    // ~ Constructors ..........................................................
+
     // ----------------------------------------------------------
     /**
      * Instantiates the fields above
@@ -48,7 +46,7 @@ public class SinglyLinkedListTest extends student.TestCase {
         difItems.add("Adam");
         difItems.add("Ben");
         difItems.add("Cath");
-        
+
         difSize = new SinglyLinkedList<String>();
         difSize.add("Animal");
         difSize.add("Bear");
@@ -62,7 +60,7 @@ public class SinglyLinkedListTest extends student.TestCase {
         node = new Node<String>("Hello");
     }
 
-    //~ Public Methods ........................................................
+    // ~ Public Methods ........................................................
 
     // ----------------------------------------------------------
     /**
@@ -105,16 +103,15 @@ public class SinglyLinkedListTest extends student.TestCase {
      * Testing the add method
      */
     public void testAdd() {
-        //Testing if the adding null object
+        // Testing if the adding null object
         Exception errorInAdd = null;
         try {
             list.add(null);
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             errorInAdd = exception;
         }
         assertTrue(errorInAdd instanceof IllegalArgumentException);
-        
+
         empty.add("Animal");
         assertEquals("{Animal}", empty.toString());
 
@@ -127,12 +124,11 @@ public class SinglyLinkedListTest extends student.TestCase {
      * Testing the add method with only one parameter.
      */
     public void testAddEnd() {
-        //Testing if the adding null object
+        // Testing if the adding null object
         Exception errorInAdd = null;
         try {
             list.add(null);
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             errorInAdd = exception;
         }
         assertTrue(errorInAdd instanceof IllegalArgumentException);
@@ -152,7 +148,7 @@ public class SinglyLinkedListTest extends student.TestCase {
         assertTrue(list.remove(2));
         assertFalse(list.remove(-1));
     }
-    
+
     // ----------------------------------------------------------
     /**
      * Testing the isEmpty method
@@ -161,41 +157,38 @@ public class SinglyLinkedListTest extends student.TestCase {
         assertTrue(empty.isEmpty());
         assertFalse(list.isEmpty());
     }
-    
+
     // ----------------------------------------------------------
     /**
      * Testing the get method
      */
     public void testGet() {
-        //Index too small
+        // Index too small
         Exception errorInAdd = null;
         try {
             list.get(-1);
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             errorInAdd = exception;
         }
         assertTrue(errorInAdd instanceof IndexOutOfBoundsException);
 
-        //Index too large
+        // Index too large
         try {
             list.get(10);
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             errorInAdd = exception;
         }
         assertTrue(errorInAdd instanceof IndexOutOfBoundsException);
 
-        //Empty list
+        // Empty list
         try {
             empty.get(0);
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             errorInAdd = exception;
         }
         assertTrue(errorInAdd instanceof IndexOutOfBoundsException);
 
-        //Normal list get testing
+        // Normal list get testing
         assertEquals("Animal", list.get(0));
         assertEquals("Bear", list.get(1));
         assertEquals("Cat", list.get(2));
@@ -217,16 +210,16 @@ public class SinglyLinkedListTest extends student.TestCase {
     public void testEquals() {
         assertTrue(list.equals(list));
         assertFalse(list.equals(difClass));
-        
+
         assertTrue(list.equals(same));
         assertFalse(list.equals(difItems));
         assertFalse(list.equals(difSize));
         assertFalse(list.equals(empty));
-        
+
         empty = null;
         assertFalse(list.equals(empty));
     }
-    
+
     // ----------------------------------------------------------
     /**
      * Testing the Equals method
@@ -236,8 +229,7 @@ public class SinglyLinkedListTest extends student.TestCase {
         Exception e = null;
         try {
             iter.next();
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             e = ex;
         }
         assertTrue(e instanceof NoSuchElementException);

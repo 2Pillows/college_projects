@@ -3,10 +3,8 @@ package towerofhanoi;
 /**
  * Testing class for the Disk class
  * 
- * The DiskTest class used a library from VT in its Build Path which is why it won't compile.
- * 
- * @author henrysmith
- * @version Oct 19, 2020
+ * The DiskTest class used a library from VT in its Build Path which is why it
+ * won't compile.
  */
 public class DiskTest extends student.TestCase {
 
@@ -46,12 +44,9 @@ public class DiskTest extends student.TestCase {
         assertEquals(1, disk.compareTo(smallerThan));
 
         Exception emptyException = null;
-        try 
-        {
+        try {
             disk.compareTo(null);
-        } 
-        catch (Exception exception) 
-        {
+        } catch (Exception exception) {
             emptyException = exception;
         }
         assertNotNull(emptyException);
@@ -59,7 +54,7 @@ public class DiskTest extends student.TestCase {
     }
 
     /**
-     * Tests the toString method in Disk. 
+     * Tests the toString method in Disk.
      */
     public void testToString() {
         assertEquals("10", disk.toString());

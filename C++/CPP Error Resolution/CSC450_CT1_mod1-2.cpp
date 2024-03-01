@@ -3,10 +3,6 @@
  Simple program with a few errors for correction.
  Please be sure to correct all outlined errors.
 ------------------------------------------------------------------------
- Program Name: CTA 1 Mod 1-2
- Author: Henry Smith
- Date: 1/22/2023
-------------------------------------------------------------------------
 */
 // Include required libraries
 #include <iostream>

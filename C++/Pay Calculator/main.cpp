@@ -1,9 +1,5 @@
 /*
 ------------------------------------------------------------------------
- Program Name: CTA 4
- Author: Henry Smith
- Date: 2/12/2023
-------------------------------------------------------------------------
  Pseudocode: Collects 3 doubles from user for their standard and overtime hours as well as rate of pay. Using the rate of pay, the standard and overtime pay is calcultaed. After, all of the 5 variables in the program are displayed with their content and pointers. These variables are destoryed and the program ends.
 ------------------------------------------------------------------------
  Program Inputs: Standard Hours, Rate of Pay, Overtime Hours

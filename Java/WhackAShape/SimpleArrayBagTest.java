@@ -6,20 +6,17 @@ package game;
 /**
  * Test method for SimpleArrayBag
  * 
- * The SimleArrayBagTest class used a library from VT in its Build Path which is why it won't compile.
+ * The SimleArrayBagTest class used a library from VT in its Build Path which is
+ * why it won't compile.
  * 
- * @author henrysmith
- * @version Oct 4, 2020
  */
 public class SimpleArrayBagTest extends student.TestCase {
 
     /**
      * Creates fields to be tested.
      */
-    private SimpleArrayBag<String> array = 
-        new SimpleArrayBag<String>();
-    private SimpleArrayBag<String> fullArray = 
-        new SimpleArrayBag<String>();
+    private SimpleArrayBag<String> array = new SimpleArrayBag<String>();
+    private SimpleArrayBag<String> fullArray = new SimpleArrayBag<String>();
 
     /**
      * Instantiates fullArray and leaves array empty.
@@ -63,7 +60,7 @@ public class SimpleArrayBagTest extends student.TestCase {
     }
 
     /**
-     * Test method for pick. Will return null is 
+     * Test method for pick. Will return null is
      * array is empty, else gets random object from bag;
      */
     public void testPick() {
@@ -72,19 +69,19 @@ public class SimpleArrayBagTest extends student.TestCase {
         assertEquals("Puppy", array.pick());
         array.add("Doggo");
         array.add("Cat");
-        
+
         for (int i = 0; i < array.getCurrentSize(); i++) {
             String rndmString = array.pick();
             assertTrue(rndmString.equals("Puppy")
-                || rndmString.equals("Doggo")
-                || rndmString.equals("Cat"));
+                    || rndmString.equals("Doggo")
+                    || rndmString.equals("Cat"));
             array.remove(rndmString);
         }
 
     }
 
     /**
-     * Test method for remove. Returns false if object 
+     * Test method for remove. Returns false if object
      * is null and if object isn't in bag.
      */
     public void testRemove() {
