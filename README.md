@@ -1,3 +1,3 @@
-# college_projects
+# misc_projects
 
-A collection of some college work utilizing a variety of languages and tools.
+A collection of smaller projects utilizing a variety of languages and tools. 
