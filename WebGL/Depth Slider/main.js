@@ -1,7 +1,6 @@
 // Slider to Control Depth
 let slider;
 
-
 // Create Canvas and Get Slider Value
 function setup() {
   createCanvas(500, 500, WEBGL);
@@ -21,8 +20,8 @@ function draw() {
   // Color Cube
   normalMaterial();
   push();
-  
-  fill
+
+  fill;
 
   // Control Depth through changing Height and Width
   box(slider.value(), slider.value(), slider.value(), 50, 50);
