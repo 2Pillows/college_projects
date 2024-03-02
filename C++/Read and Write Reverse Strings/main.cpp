@@ -34,7 +34,7 @@ void reverseFile(string fileName)
     }
 
     // Writes to new reverse file
-    string revName = "CSC450-mod5-reverse.txt";
+    string revName = "mod5-reverse.txt";
     ofstream outRevFile(revName, ofstream::out);
     // Iterator to write entire vector
     ostream_iterator<string> outItr(outRevFile, "\n");
@@ -49,7 +49,7 @@ void reverseFile(string fileName)
 int main()
 {
     // Target output file
-    string fileName = "CSC450_CT5_mod5.txt";
+    string fileName = "mod5.txt";
     string userInput;
     // Prompt user for input and store input
     cout << "Enter text to add to file: " << endl;
